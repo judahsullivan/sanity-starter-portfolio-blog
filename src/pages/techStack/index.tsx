@@ -1,4 +1,6 @@
-import { Box, Heading } from "@chakra-ui/react";
+import TechStackIndex from "@/components/views/techStack/techStackIndex";
+import { getTechStackPage } from "@/lib/queries/techstack.queries";
+import { getClient } from "@/lib/sanity.client";
 
 
 
@@ -6,11 +8,28 @@ import { Box, Heading } from "@chakra-ui/react";
 
 
 
-export default function TechStack() {
+export default function TechStack({
+  techStackPage
+}: {
+  techStackPage: PageLoad
+}) {
   return (
-    <Box>
-      <Heading>TechStack Page</Heading>
-    </Box>
-
+    <TechStackIndex techStackPage={techStackPage} />
   )
+}
+
+export async function getStaticProps() {
+  const client = getClient()
+
+
+  const data = await getTechStackPage(client)
+
+
+
+  return {
+    props: {
+      ...data,
+
+    }
+  }
 }

@@ -1,4 +1,6 @@
-import { Box, Heading } from "@chakra-ui/react";
+import BlogIndex from "@/components/views/blog/blogIndex"
+import { getBlogPage } from "@/lib/queries/blog.queries"
+import { getClient } from "@/lib/sanity.client"
 
 
 
@@ -7,10 +9,27 @@ import { Box, Heading } from "@chakra-ui/react";
 
 
 
-export default function Blog() {
+export default function Blog({
+  blogPage
+}: {
+  blogPage: PageLoad
+}) {
   return (
-    <Box>
-      <Heading>Blog Page</Heading>
-    </Box>
+    <BlogIndex blogPage={blogPage} />
   )
+}
+
+
+export async function getStaticProps() {
+  const client = getClient()
+
+  const data = await getBlogPage(client)
+
+  return {
+
+    props: {
+      ...data,
+
+    }
+  }
 }

@@ -1,15 +1,30 @@
-import { Box, Heading } from "@chakra-ui/react";
+import { getAboutPage } from "@/lib/queries/about.queries";
+import { getClient } from "@/lib/sanity.client";
+import AboutIndex from "@/components/views/about/aboutIndex";
 
 
 
 
 
 
-
-export default function About() {
+export default function About({
+  aboutPage
+}: {
+  aboutPage: PageLoad
+}) {
   return (
-    <Box>
-      <Heading>About Page</Heading>
-    </Box>
+    <AboutIndex aboutPage={aboutPage} />
   )
+}
+
+
+
+export async function getStaticProps() {
+  const client = getClient()
+  const data = await getAboutPage(client)
+  return {
+    props: {
+      ...data
+    }
+  }
 }
