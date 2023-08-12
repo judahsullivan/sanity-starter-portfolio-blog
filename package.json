@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": "git@github.com:judahsullivan/sanity-starter-portfolio-blog.git",
   "author": "Judah Sullivan",
-  "description": "Fullstack built with Sanity and Nextjs.",
+  "description": "Fullstack portfolio-blog built with Sanity and Nextjs.",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
