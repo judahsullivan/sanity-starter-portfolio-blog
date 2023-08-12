@@ -14,8 +14,8 @@ export default function ProjectsIndex({
 }) {
   console.log(projectsPage)
   return (
-    <Box>
-      <Heading>Projects Page</Heading>
-    </Box>
+    <div>
+      <h1>Projects Page</h1>
+    </div>
   )
 }

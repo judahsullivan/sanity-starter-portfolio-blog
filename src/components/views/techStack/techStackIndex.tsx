@@ -12,8 +12,8 @@ export default function TechStackIndex({
 }) {
   console.log(techStackPage)
   return (
-    <Box>
-      <Heading>Tech Stack</Heading>
-    </Box>
+    <div>
+      <h1>Tech Stack Page</h1>
+    </div>
   )
 }

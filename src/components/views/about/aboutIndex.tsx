@@ -1,4 +1,3 @@
-import { Box, Heading } from "@chakra-ui/react";
 
 
 
@@ -11,8 +10,8 @@ export default function AboutIndex({
 }) {
   console.log(aboutPage)
   return (
-    <Box>
-      <Heading>About Index</Heading>
-    </Box>
+    <div>
+      <h1>About Page</h1>
+    </div>
   )
 }

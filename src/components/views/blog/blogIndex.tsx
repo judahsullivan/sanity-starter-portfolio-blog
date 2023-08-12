@@ -12,8 +12,8 @@ export default function BlogIndex({
 }) {
   console.log(blogPage)
   return (
-    <Box>
-      <Heading>Blog Page</Heading>
-    </Box>
+    <div>
+      <h1>Blog Page</h1>
+    </div>
   )
 }

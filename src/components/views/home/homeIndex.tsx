@@ -12,8 +12,8 @@ export default function HomeIndex({
 }) {
   console.log(home)
   return (
-    <Box>
-      <Heading>Home</Heading>
-    </Box>
+    <div>
+      <h1>Home Page</h1>
+    </div>
   )
 }

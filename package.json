@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "repository": "git@github.com:judahsullivan/sanity-starter-portfolio-blog.git",
   "author": "Judah Sullivan",
-  "description": "Fullstack portfolio-blog built with Sanity and Nextjs.",
+  "description": "Fullstack Kick-Starter portfolio-blog built with Sanity and Nextjs.",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
@@ -12,9 +12,6 @@
     "build": "next build"
   },
   "dependencies": {
-    "@chakra-ui/react": "^2.8.0",
-    "@emotion/react": "^11.11.1",
-    "@emotion/styled": "^11.11.0",
     "@portabletext/react": "^3.0.4",
     "@sanity/block-content-to-react": "^3.0.0",
     "@sanity/client": "^6.4.5",
