@@ -1,0 +1,14 @@
+{
+  "name": "sanity-starter-portfolio-blog",
+  "version": "1.0.0",
+  "repository": "git@github.com:judahsullivan/sanity-starter-portfolio-blog.git",
+  "author": "Judah Sullivan",
+  "description": "Fullstack built with Sanity and Nextjs.",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next dev",
+    "lint": "next lint",
+    "start": "next start",
+    "build": "next build"
+  }
+}
