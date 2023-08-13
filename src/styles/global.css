@@ -1,0 +1,26 @@
+
+body{
+  width: 100vw;
+  height: 100vh;
+}
+
+applayout{
+  width: 100%;
+  background-color: blue;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-container {
+  position: sticky;
+  text-transform: capitalize; 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  background-color: gray;
+  gap: 1rem;
+  padding: 5;
+  margin: 2;
+}
