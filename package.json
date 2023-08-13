@@ -1,9 +1,9 @@
 {
-  "name": "sanity-starter-portfolio-blog",
+  "name": "nextjs-sanity-multi-portfolio-kickstart",
   "version": "1.0.0",
   "repository": "git@github.com:judahsullivan/sanity-starter-portfolio-blog.git",
   "author": "Judah Sullivan",
-  "description": "Fullstack Kick-Starter portfolio-blog built with Sanity and Nextjs.",
+  "description": "Fullstack Kick-Starter multi-page portfolio-blog built with Sanity and Nextjs.",
   "license": "MIT",
   "scripts": {
     "dev": "next dev",
