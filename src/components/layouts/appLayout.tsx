@@ -1,20 +1,18 @@
-import { Fragment, ReactNode } from "react";
-import Navbar from "../settings/navbar";
+import { Fragment, ReactNode } from 'react'
+import Navbar from '../settings/navbar'
 
 
 export default function AppLayout({
+  settings,
   children
 }: {
   children: ReactNode
+  settings?: SettingsPayLoad // Make settings optional
 }) {
   return (
     <Fragment>
-      <Navbar />
-      <div
-        className="applayout"
-      >
-        {children}
-      </div>
+      {settings && <Navbar pageLinks={settings?.pageLinks} />}
+      {children}
     </Fragment>
   )
 }

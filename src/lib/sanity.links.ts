@@ -8,7 +8,7 @@ export function resolveHref(
     case 'about':
       return '/about'
     case 'stack':
-      return '/stack'
+      return '/techStack'
     case 'blog':
       return '/blog'
     case 'projects':

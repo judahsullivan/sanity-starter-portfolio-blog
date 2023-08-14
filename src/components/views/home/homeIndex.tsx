@@ -1,4 +1,4 @@
-import { Box, Heading } from "@chakra-ui/react";
+import PageLayout from "@/components/layouts/pageLayout";
 
 
 
@@ -12,8 +12,8 @@ export default function HomeIndex({
 }) {
   console.log(home)
   return (
-    <div>
+    <PageLayout>
       <h1>Home Page</h1>
-    </div>
+    </PageLayout >
   )
 }

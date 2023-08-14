@@ -1,17 +1,24 @@
-import { getAboutPage } from "@/lib/queries/about.queries";
 import { getClient } from "@/lib/sanity.client";
 import AboutIndex from "@/components/views/about/aboutIndex";
+import { getAboutPage } from "@/lib/queries/about.queries";
+import { readToken } from "@/lib/sanity.api";
+import { GetStaticProps } from "next";
 
 
+interface AboutProps {
+  aboutPage: PageLoad;
+  token?: string;
+  draftMode?: boolean;
+}
 
 
-
+interface Query {
+  [key: string]: string;
+}
 
 export default function About({
   aboutPage
-}: {
-  aboutPage: PageLoad
-}) {
+}: AboutProps) {
   return (
     <AboutIndex aboutPage={aboutPage} />
   )
@@ -19,12 +26,15 @@ export default function About({
 
 
 
-export async function getStaticProps() {
-  const client = getClient()
+export const getStaticProps: GetStaticProps<AboutProps, Query> = async (ctx) => {
+  const { draftMode = false } = ctx
+  const client = getClient(draftMode ? { token: readToken } : undefined)
   const data = await getAboutPage(client)
   return {
     props: {
-      ...data
+      ...data,
+      draftMode,
+      token: draftMode ? readToken : '',
     }
   }
 }

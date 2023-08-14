@@ -1,38 +1,38 @@
 import Link from "next/link";
+import { resolveHref } from "@/lib/sanity.links";
 
+interface NavbarProps {
+  pageLinks: PageLinks[];
+}
 
-
-export default function Navbar() {
+export default function Navbar(props: NavbarProps) {
+  const { pageLinks } = props;
+  console.log(pageLinks)
   return (
     <div
       className="navbar-container"
     >
-      <Link
-        href={'/'}
-      >
-        home
-      </Link>
-      <Link
-        href={'/about'}
-      >
-        about
-      </Link>
-      <Link
-        href={'/projects'}
-      >
-        projects
-      </Link>
+      {pageLinks.map((link) => {
+        const href = resolveHref(link._type)
+        if (!href) {
+          return null
+        }
+        return (
+          <nav
+            key={link._type}
 
-      <Link
-        href={'/blog'}
-      >
-        blog
-      </Link>
-      <Link
-        href={'/techStack'}
-      >
-        techstack
-      </Link>
+          >
+            <Link
+              href={href}
+              passHref
+
+            >
+              {link.title}
+            </Link>
+          </nav>
+        )
+      })}
+      Navbar
     </div>
   )
 }

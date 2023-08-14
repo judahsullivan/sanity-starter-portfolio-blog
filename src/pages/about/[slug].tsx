@@ -1,4 +1,3 @@
-import { Box, Heading } from "@chakra-ui/react";
 
 
 
@@ -9,8 +8,8 @@ import { Box, Heading } from "@chakra-ui/react";
 
 export default function Bio() {
   return (
-    <Box>
-      <Heading>Bio Page</Heading>
-    </Box>
+    <div>
+      <h1>Bio Page</h1>
+    </div>
   )
 }
